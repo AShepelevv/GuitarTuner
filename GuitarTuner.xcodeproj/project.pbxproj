@@ -7,20 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5304CB242386BFAD006C51CE /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5304CB232386BFAD006C51CE /* G.wav */; };
-		5304CB262386C352006C51CE /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5304CB252386C352006C51CE /* A.wav */; };
+		531AA5D5238D91BA00564154 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5D4238D91BA00564154 /* NotesTests.swift */; };
+		531AA5D6238DABB700564154 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534AEEF9238D1CA100E45A25 /* Notes.swift */; };
+		531AA5D8238DAC0900564154 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3CB92383373C00AADFCE /* TunerViewController.swift */; };
+		531AA5D9238DAC0B00564154 /* SpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538378A42388158F00582497 /* SpectrumView.swift */; };
+		531AA5DA238DAC1400564154 /* FrequencyDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A34141238C266700B23136 /* FrequencyDialView.swift */; };
+		531AA5DC238E696B00564154 /* ScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5DB238E696B00564154 /* ScalesViewController.swift */; };
+		531AA5DE238E69BC00564154 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5DD238E69BC00564154 /* TabsViewController.swift */; };
+		531AA5E1238E6A0A00564154 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5E0238E6A0A00564154 /* SettingsViewController.swift */; };
+		531AA5E2238E6A0A00564154 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5E0238E6A0A00564154 /* SettingsViewController.swift */; };
 		532F3C8E238335DA00AADFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3C8D238335DA00AADFCE /* AppDelegate.swift */; };
-		532F3C90238335DA00AADFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3C8F238335DA00AADFCE /* SceneDelegate.swift */; };
-		532F3C98238335DA00AADFCE /* GuitarTuner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 532F3C96238335DA00AADFCE /* GuitarTuner.xcdatamodeld */; };
 		532F3C9A238335DB00AADFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532F3C99238335DB00AADFCE /* Assets.xcassets */; };
 		532F3C9D238335DB00AADFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532F3C9B238335DB00AADFCE /* LaunchScreen.storyboard */; };
-		532F3CA8238335DB00AADFCE /* GuitarTunerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3CA7238335DB00AADFCE /* GuitarTunerTests.swift */; };
-		532F3CBA2383373C00AADFCE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3CB92383373C00AADFCE /* TestViewController.swift */; };
+		532F3CBA2383373C00AADFCE /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3CB92383373C00AADFCE /* TunerViewController.swift */; };
+		534AEEFA238D1CA100E45A25 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534AEEF9238D1CA100E45A25 /* Notes.swift */; };
+		53544212239289DD006CB0E1 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53544211239289DD006CB0E1 /* Double.swift */; };
+		535442142393D156006CB0E1 /* FourierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535442132393D156006CB0E1 /* FourierTests.swift */; };
+		535442162393D273006CB0E1 /* FourierTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C42391A07E00869B30 /* FourierTransformer.swift */; };
+		535442172393D35E006CB0E1 /* SpectralAudioFileAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89BE23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift */; };
+		535442182393D404006CB0E1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C22391A05700869B30 /* Protocols.swift */; };
+		535442192393D419006CB0E1 /* Spectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C02391A02A00869B30 /* Spectrum.swift */; };
+		5354421C2393D571006CB0E1 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C82391A17100869B30 /* Int.swift */; };
+		5354421D2393D573006CB0E1 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53544211239289DD006CB0E1 /* Double.swift */; };
+		536D4CE8238FCDDB0004DC1E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CE7238FCDDB0004DC1E /* NetworkService.swift */; };
+		536D4CEE238FCFA00004DC1E /* GuitarScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CED238FCFA00004DC1E /* GuitarScale.swift */; };
+		536D4CF0238FCFF90004DC1E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CEF238FCFF90004DC1E /* RequestType.swift */; };
 		538378A52388158F00582497 /* SpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538378A42388158F00582497 /* SpectrumView.swift */; };
+		538A89BF23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89BE23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift */; };
+		538A89C12391A02A00869B30 /* Spectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C02391A02A00869B30 /* Spectrum.swift */; };
+		538A89C32391A05700869B30 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C22391A05700869B30 /* Protocols.swift */; };
+		538A89C52391A07E00869B30 /* FourierTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C42391A07E00869B30 /* FourierTransformer.swift */; };
+		538A89C92391A17100869B30 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C82391A17100869B30 /* Int.swift */; };
+		53A34142238C266700B23136 /* FrequencyDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A34141238C266700B23136 /* FrequencyDialView.swift */; };
+		53D0BFDD238FE9CC00F1B585 /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0BFDC238FE9CC00F1B585 /* ScaleCollectionViewCell.swift */; };
+		53D0BFE12390124900F1B585 /* TabsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0BFE02390124900F1B585 /* TabsTableViewCell.swift */; };
+		53D0BFE32390166900F1B585 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0BFE22390166900F1B585 /* WebViewController.swift */; };
+		53F4574623944BA1009DA03C /* scales.json in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574523944BA1009DA03C /* scales.json */; };
+		53F45750239451B0009DA03C /* 330_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F45749239451B0009DA03C /* 330_4.wav */; };
+		53F45751239451B0009DA03C /* 330_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574A239451B0009DA03C /* 330_5.wav */; };
+		53F45752239451B0009DA03C /* 330_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574B239451B0009DA03C /* 330_3.wav */; };
+		53F45753239451B0009DA03C /* 330_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574C239451B0009DA03C /* 330_2.wav */; };
+		53F45754239451B0009DA03C /* 330_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574D239451B0009DA03C /* 330_1.wav */; };
+		53F45755239451B0009DA03C /* 330_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574E239451B0009DA03C /* 330_0.wav */; };
+		53F45756239451B0009DA03C /* 300&200.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53F4574F239451B0009DA03C /* 300&200.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		532F3CA4238335DB00AADFCE /* PBXContainerItemProxy */ = {
+		531AA5CE238D909A00564154 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 532F3C82238335DA00AADFCE /* Project object */;
 			proxyType = 1;
@@ -30,31 +63,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5304CB232386BFAD006C51CE /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
-		5304CB252386C352006C51CE /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
+		531AA5C9238D909A00564154 /* GuitarTunerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarTunerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		531AA5CD238D909A00564154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		531AA5D4238D91BA00564154 /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
+		531AA5DB238E696B00564154 /* ScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesViewController.swift; sourceTree = "<group>"; };
+		531AA5DD238E69BC00564154 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
+		531AA5E0238E6A0A00564154 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		532F3C8A238335DA00AADFCE /* GuitarTuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarTuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		532F3C8D238335DA00AADFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		532F3C8F238335DA00AADFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		532F3C97238335DA00AADFCE /* GuitarTuner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuitarTuner.xcdatamodel; sourceTree = "<group>"; };
 		532F3C99238335DB00AADFCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		532F3C9C238335DB00AADFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532F3C9E238335DB00AADFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		532F3CA3238335DB00AADFCE /* GuitarTunerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarTunerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		532F3CA7238335DB00AADFCE /* GuitarTunerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarTunerTests.swift; sourceTree = "<group>"; };
-		532F3CA9238335DB00AADFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		532F3CB92383373C00AADFCE /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		532F3CB92383373C00AADFCE /* TunerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerViewController.swift; sourceTree = "<group>"; };
+		534AEEF9238D1CA100E45A25 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		53544211239289DD006CB0E1 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		535442132393D156006CB0E1 /* FourierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourierTests.swift; sourceTree = "<group>"; };
+		536D4CE7238FCDDB0004DC1E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		536D4CED238FCFA00004DC1E /* GuitarScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarScale.swift; sourceTree = "<group>"; };
+		536D4CEF238FCFF90004DC1E /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		538378A42388158F00582497 /* SpectrumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumView.swift; sourceTree = "<group>"; };
+		538A89BE23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectralAudioFileAnalyzer.swift; sourceTree = "<group>"; };
+		538A89C02391A02A00869B30 /* Spectrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spectrum.swift; sourceTree = "<group>"; };
+		538A89C22391A05700869B30 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		538A89C42391A07E00869B30 /* FourierTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourierTransformer.swift; sourceTree = "<group>"; };
+		538A89C82391A17100869B30 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		53A34141238C266700B23136 /* FrequencyDialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyDialView.swift; sourceTree = "<group>"; };
+		53D0BFDC238FE9CC00F1B585 /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
+		53D0BFE02390124900F1B585 /* TabsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTableViewCell.swift; sourceTree = "<group>"; };
+		53D0BFE22390166900F1B585 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		53F4574523944BA1009DA03C /* scales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scales.json; sourceTree = "<group>"; };
+		53F45749239451B0009DA03C /* 330_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 330_4.wav; sourceTree = "<group>"; };
+		53F4574A239451B0009DA03C /* 330_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 330_5.wav; sourceTree = "<group>"; };
+		53F4574B239451B0009DA03C /* 330_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 330_3.wav; sourceTree = "<group>"; };
+		53F4574C239451B0009DA03C /* 330_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 330_2.wav; sourceTree = "<group>"; };
+		53F4574D239451B0009DA03C /* 330_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 330_1.wav; sourceTree = "<group>"; };
+		53F4574E239451B0009DA03C /* 330_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 330_0.wav; sourceTree = "<group>"; };
+		53F4574F239451B0009DA03C /* 300&200.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "300&200.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		532F3C87238335DA00AADFCE /* Frameworks */ = {
+		531AA5C6238D909A00564154 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		532F3CA0238335DB00AADFCE /* Frameworks */ = {
+		532F3C87238335DA00AADFCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,20 +119,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5304CB202386BDB8006C51CE /* Music */ = {
+		531AA5CA238D909A00564154 /* GuitarTunerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5304CB252386C352006C51CE /* A.wav */,
-				5304CB232386BFAD006C51CE /* G.wav */,
+				535442152393D1B5006CB0E1 /* Notes */,
+				531AA5CD238D909A00564154 /* Info.plist */,
+				531AA5D4238D91BA00564154 /* NotesTests.swift */,
+				535442132393D156006CB0E1 /* FourierTests.swift */,
 			);
-			path = Music;
+			path = GuitarTunerTests;
+			sourceTree = "<group>";
+		};
+		532186642394108D00CF576E /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				534AEEF9238D1CA100E45A25 /* Notes.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		532F3C81238335DA00AADFCE = {
 			isa = PBXGroup;
 			children = (
 				532F3C8C238335DA00AADFCE /* GuitarTuner */,
-				532F3CA6238335DB00AADFCE /* GuitarTunerTests */,
+				531AA5CA238D909A00564154 /* GuitarTunerTests */,
 				532F3C8B238335DA00AADFCE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				532F3C8A238335DA00AADFCE /* GuitarTuner.app */,
-				532F3CA3238335DB00AADFCE /* GuitarTunerTests.xctest */,
+				531AA5C9238D909A00564154 /* GuitarTunerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,47 +159,141 @@
 		532F3C8C238335DA00AADFCE /* GuitarTuner */ = {
 			isa = PBXGroup;
 			children = (
-				5304CB202386BDB8006C51CE /* Music */,
+				532F3C9E238335DB00AADFCE /* Info.plist */,
+				532186642394108D00CF576E /* Notes */,
+				538A89C72391A16700869B30 /* Extentions */,
+				538A89BB23918A7600869B30 /* Fourier */,
+				536D4CE9238FCE000004DC1E /* Network */,
+				53A34140238C1E9900B23136 /* Core */,
 				532F3CB82383371400AADFCE /* Screens */,
 				538378A62388159400582497 /* Views */,
-				532F3C8D238335DA00AADFCE /* AppDelegate.swift */,
-				532F3C8F238335DA00AADFCE /* SceneDelegate.swift */,
-				532F3C99238335DB00AADFCE /* Assets.xcassets */,
-				532F3C9B238335DB00AADFCE /* LaunchScreen.storyboard */,
-				532F3C9E238335DB00AADFCE /* Info.plist */,
-				532F3C96238335DA00AADFCE /* GuitarTuner.xcdatamodeld */,
+				53D0BFDF238FE9E700F1B585 /* Cells */,
 			);
 			path = GuitarTuner;
-			sourceTree = "<group>";
-		};
-		532F3CA6238335DB00AADFCE /* GuitarTunerTests */ = {
-			isa = PBXGroup;
-			children = (
-				532F3CA7238335DB00AADFCE /* GuitarTunerTests.swift */,
-				532F3CA9238335DB00AADFCE /* Info.plist */,
-			);
-			path = GuitarTunerTests;
 			sourceTree = "<group>";
 		};
 		532F3CB82383371400AADFCE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				532F3CB92383373C00AADFCE /* TestViewController.swift */,
+				532F3CB92383373C00AADFCE /* TunerViewController.swift */,
+				531AA5DB238E696B00564154 /* ScalesViewController.swift */,
+				531AA5DD238E69BC00564154 /* TabsViewController.swift */,
+				531AA5E0238E6A0A00564154 /* SettingsViewController.swift */,
+				53D0BFE22390166900F1B585 /* WebViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		535442152393D1B5006CB0E1 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				53F4574F239451B0009DA03C /* 300&200.wav */,
+				53F4574E239451B0009DA03C /* 330_0.wav */,
+				53F4574D239451B0009DA03C /* 330_1.wav */,
+				53F4574C239451B0009DA03C /* 330_2.wav */,
+				53F4574B239451B0009DA03C /* 330_3.wav */,
+				53F45749239451B0009DA03C /* 330_4.wav */,
+				53F4574A239451B0009DA03C /* 330_5.wav */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		536D4CE9238FCE000004DC1E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				536D4CE7238FCDDB0004DC1E /* NetworkService.swift */,
+				536D4CEF238FCFF90004DC1E /* RequestType.swift */,
+				536D4CEA238FCF630004DC1E /* Representation */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		536D4CEA238FCF630004DC1E /* Representation */ = {
+			isa = PBXGroup;
+			children = (
+				536D4CED238FCFA00004DC1E /* GuitarScale.swift */,
+			);
+			path = Representation;
 			sourceTree = "<group>";
 		};
 		538378A62388159400582497 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				538378A42388158F00582497 /* SpectrumView.swift */,
+				53A34141238C266700B23136 /* FrequencyDialView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		538A89BB23918A7600869B30 /* Fourier */ = {
+			isa = PBXGroup;
+			children = (
+				538A89BE23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift */,
+				538A89C02391A02A00869B30 /* Spectrum.swift */,
+				538A89C22391A05700869B30 /* Protocols.swift */,
+				538A89CA2391A18E00869B30 /* Transformers */,
+			);
+			path = Fourier;
+			sourceTree = "<group>";
+		};
+		538A89C72391A16700869B30 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				538A89C82391A17100869B30 /* Int.swift */,
+				53544211239289DD006CB0E1 /* Double.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		538A89CA2391A18E00869B30 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				538A89C42391A07E00869B30 /* FourierTransformer.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
+		53A34140238C1E9900B23136 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				532F3C99238335DB00AADFCE /* Assets.xcassets */,
+				532F3C8D238335DA00AADFCE /* AppDelegate.swift */,
+				532F3C9B238335DB00AADFCE /* LaunchScreen.storyboard */,
+				53F4574523944BA1009DA03C /* scales.json */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		53D0BFDF238FE9E700F1B585 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53D0BFDC238FE9CC00F1B585 /* ScaleCollectionViewCell.swift */,
+				53D0BFE02390124900F1B585 /* TabsTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		531AA5C8238D909A00564154 /* GuitarTunerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531AA5D0238D909A00564154 /* Build configuration list for PBXNativeTarget "GuitarTunerTests" */;
+			buildPhases = (
+				531AA5C5238D909A00564154 /* Sources */,
+				531AA5C6238D909A00564154 /* Frameworks */,
+				531AA5C7238D909A00564154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				531AA5CF238D909A00564154 /* PBXTargetDependency */,
+			);
+			name = GuitarTunerTests;
+			productName = GuitarTunerTests;
+			productReference = 531AA5C9238D909A00564154 /* GuitarTunerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		532F3C89238335DA00AADFCE /* GuitarTuner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 532F3CAC238335DB00AADFCE /* Build configuration list for PBXNativeTarget "GuitarTuner" */;
@@ -142,6 +301,7 @@
 				532F3C86238335DA00AADFCE /* Sources */,
 				532F3C87238335DA00AADFCE /* Frameworks */,
 				532F3C88238335DA00AADFCE /* Resources */,
+				53C6534C2397B8660041BD64 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -151,24 +311,6 @@
 			productName = GuitarTuner;
 			productReference = 532F3C8A238335DA00AADFCE /* GuitarTuner.app */;
 			productType = "com.apple.product-type.application";
-		};
-		532F3CA2238335DB00AADFCE /* GuitarTunerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 532F3CAF238335DB00AADFCE /* Build configuration list for PBXNativeTarget "GuitarTunerTests" */;
-			buildPhases = (
-				532F3C9F238335DB00AADFCE /* Sources */,
-				532F3CA0238335DB00AADFCE /* Frameworks */,
-				532F3CA1238335DB00AADFCE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				532F3CA5238335DB00AADFCE /* PBXTargetDependency */,
-			);
-			name = GuitarTunerTests;
-			productName = GuitarTunerTests;
-			productReference = 532F3CA3238335DB00AADFCE /* GuitarTunerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -180,13 +322,12 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = ashepelev;
 				TargetAttributes = {
+					531AA5C8238D909A00564154 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					532F3C89238335DA00AADFCE = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
-					};
-					532F3CA2238335DB00AADFCE = {
-						CreatedOnToolsVersion = 11.2.1;
-						TestTargetID = 532F3C89238335DA00AADFCE;
 					};
 				};
 			};
@@ -204,60 +345,114 @@
 			projectRoot = "";
 			targets = (
 				532F3C89238335DA00AADFCE /* GuitarTuner */,
-				532F3CA2238335DB00AADFCE /* GuitarTunerTests */,
+				531AA5C8238D909A00564154 /* GuitarTunerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		531AA5C7238D909A00564154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F45753239451B0009DA03C /* 330_2.wav in Resources */,
+				53F45756239451B0009DA03C /* 300&200.wav in Resources */,
+				53F45750239451B0009DA03C /* 330_4.wav in Resources */,
+				53F45755239451B0009DA03C /* 330_0.wav in Resources */,
+				53F45751239451B0009DA03C /* 330_5.wav in Resources */,
+				53F45754239451B0009DA03C /* 330_1.wav in Resources */,
+				53F45752239451B0009DA03C /* 330_3.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		532F3C88238335DA00AADFCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5304CB242386BFAD006C51CE /* G.wav in Resources */,
 				532F3C9D238335DB00AADFCE /* LaunchScreen.storyboard in Resources */,
-				5304CB262386C352006C51CE /* A.wav in Resources */,
+				53F4574623944BA1009DA03C /* scales.json in Resources */,
 				532F3C9A238335DB00AADFCE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		532F3CA1238335DB00AADFCE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53C6534C2397B8660041BD64 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		531AA5C5238D909A00564154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531AA5D5238D91BA00564154 /* NotesTests.swift in Sources */,
+				531AA5D8238DAC0900564154 /* TunerViewController.swift in Sources */,
+				531AA5E2238E6A0A00564154 /* SettingsViewController.swift in Sources */,
+				5354421C2393D571006CB0E1 /* Int.swift in Sources */,
+				5354421D2393D573006CB0E1 /* Double.swift in Sources */,
+				535442182393D404006CB0E1 /* Protocols.swift in Sources */,
+				535442192393D419006CB0E1 /* Spectrum.swift in Sources */,
+				535442172393D35E006CB0E1 /* SpectralAudioFileAnalyzer.swift in Sources */,
+				535442142393D156006CB0E1 /* FourierTests.swift in Sources */,
+				531AA5D6238DABB700564154 /* Notes.swift in Sources */,
+				531AA5DA238DAC1400564154 /* FrequencyDialView.swift in Sources */,
+				535442162393D273006CB0E1 /* FourierTransformer.swift in Sources */,
+				531AA5D9238DAC0B00564154 /* SpectrumView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		532F3C86238335DA00AADFCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536D4CE8238FCDDB0004DC1E /* NetworkService.swift in Sources */,
+				53A34142238C266700B23136 /* FrequencyDialView.swift in Sources */,
+				536D4CF0238FCFF90004DC1E /* RequestType.swift in Sources */,
+				538A89C92391A17100869B30 /* Int.swift in Sources */,
 				532F3C8E238335DA00AADFCE /* AppDelegate.swift in Sources */,
-				532F3C98238335DA00AADFCE /* GuitarTuner.xcdatamodeld in Sources */,
 				538378A52388158F00582497 /* SpectrumView.swift in Sources */,
-				532F3CBA2383373C00AADFCE /* TestViewController.swift in Sources */,
-				532F3C90238335DA00AADFCE /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		532F3C9F238335DB00AADFCE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				532F3CA8238335DB00AADFCE /* GuitarTunerTests.swift in Sources */,
+				536D4CEE238FCFA00004DC1E /* GuitarScale.swift in Sources */,
+				532F3CBA2383373C00AADFCE /* TunerViewController.swift in Sources */,
+				531AA5DE238E69BC00564154 /* TabsViewController.swift in Sources */,
+				531AA5DC238E696B00564154 /* ScalesViewController.swift in Sources */,
+				534AEEFA238D1CA100E45A25 /* Notes.swift in Sources */,
+				53D0BFE12390124900F1B585 /* TabsTableViewCell.swift in Sources */,
+				538A89BF23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift in Sources */,
+				538A89C52391A07E00869B30 /* FourierTransformer.swift in Sources */,
+				53D0BFDD238FE9CC00F1B585 /* ScaleCollectionViewCell.swift in Sources */,
+				538A89C32391A05700869B30 /* Protocols.swift in Sources */,
+				531AA5E1238E6A0A00564154 /* SettingsViewController.swift in Sources */,
+				538A89C12391A02A00869B30 /* Spectrum.swift in Sources */,
+				53544212239289DD006CB0E1 /* Double.swift in Sources */,
+				53D0BFE32390166900F1B585 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		532F3CA5238335DB00AADFCE /* PBXTargetDependency */ = {
+		531AA5CF238D909A00564154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 532F3C89238335DA00AADFCE /* GuitarTuner */;
-			targetProxy = 532F3CA4238335DB00AADFCE /* PBXContainerItemProxy */;
+			targetProxy = 531AA5CE238D909A00564154 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -273,6 +468,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		531AA5D1238D909A00564154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F22994NDM8;
+				INFOPLIST_FILE = GuitarTunerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ashepelev.GuitarTunerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		531AA5D2238D909A00564154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F22994NDM8;
+				INFOPLIST_FILE = GuitarTunerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ashepelev.GuitarTunerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		532F3CAA238335DB00AADFCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -323,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -377,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -394,6 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = GuitarTuner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,6 +644,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = GuitarTuner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,53 +656,18 @@
 			};
 			name = Release;
 		};
-		532F3CB0238335DB00AADFCE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F22994NDM8;
-				INFOPLIST_FILE = GuitarTunerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ashepelev.GuitarTunerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuitarTuner.app/GuitarTuner";
-			};
-			name = Debug;
-		};
-		532F3CB1238335DB00AADFCE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F22994NDM8;
-				INFOPLIST_FILE = GuitarTunerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ashepelev.GuitarTunerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuitarTuner.app/GuitarTuner";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		531AA5D0238D909A00564154 /* Build configuration list for PBXNativeTarget "GuitarTunerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531AA5D1238D909A00564154 /* Debug */,
+				531AA5D2238D909A00564154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		532F3C85238335DA00AADFCE /* Build configuration list for PBXProject "GuitarTuner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -488,29 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		532F3CAF238335DB00AADFCE /* Build configuration list for PBXNativeTarget "GuitarTunerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				532F3CB0238335DB00AADFCE /* Debug */,
-				532F3CB1238335DB00AADFCE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		532F3C96238335DA00AADFCE /* GuitarTuner.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				532F3C97238335DA00AADFCE /* GuitarTuner.xcdatamodel */,
-			);
-			currentVersion = 532F3C97238335DA00AADFCE /* GuitarTuner.xcdatamodel */;
-			path = GuitarTuner.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 532F3C82238335DA00AADFCE /* Project object */;
 }

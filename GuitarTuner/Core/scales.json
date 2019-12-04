@@ -1,0 +1,70 @@
+{
+    "scales":[
+        {
+            "name": "Gutair Classic",
+            "imgLinkLight": "https://i.ibb.co/TPnXt12/Guitar.png",
+            "imgLinkDark": "",
+            "notes": [
+                "E4",
+                "B3",
+                "G3",
+                "D3",
+                "A2",
+                "E2"
+            ]
+        },
+        {
+            "name": "Ukulele",
+            "imgLinkLight": "https://i.ibb.co/zRQFSck/Ukulele.png",
+            "imgLinkDark": "",
+            "notes": [
+                "A4",
+                "E4",
+                "C4",
+                "G4"
+            ]
+        },
+        {
+            "name": "Electro Gutair",
+            "imgLinkLight": "https://i.ibb.co/RBySKsp/Electro.png",
+            "imgLinkDark": "",
+            "notes": [
+                "E4",
+                "B3",
+                "G3",
+                "D3",
+                "A2",
+                "D2"
+            ]
+        },
+        {
+            "name": "Open",
+            "imgLinkLight": "https://i.ibb.co/TPnXt12/Guitar.png",
+            "imgLinkDark": "",
+            "notes": [
+                "D4",
+                "B3",
+                "G3",
+                "D3",
+                "G2",
+                "D2"
+            ]
+        },
+        {
+            "name": "Balalayka",
+            "imgLinkLight": "https://i.ibb.co/pddqxm0/Balalayka.png",
+            "imgLinkDark": "",
+            "notes": [
+                "A4",
+                "E4",
+                "E4"
+            ]
+        }
+    ]
+    
+}
+
+
+
+
+
