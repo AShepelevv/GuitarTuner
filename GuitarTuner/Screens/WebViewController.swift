@@ -10,10 +10,10 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
-    
+
     var webView: WKWebView!
-    var link : String!
-    
+    var link: String!
+
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
@@ -21,14 +21,14 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         webView.navigationDelegate = self
         view = webView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let myURL = URL(string: link)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
-    
+
 //    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 //        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
 //            guard let html = html as? String else { return }
@@ -44,7 +44,3 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 //        }
 //    }
 }
-
-
-
-

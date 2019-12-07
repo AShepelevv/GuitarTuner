@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum RequestType : String {
-    case scales = "scales"
+enum RequestType: String {
+    case scales
 }

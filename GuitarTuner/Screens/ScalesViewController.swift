@@ -10,9 +10,9 @@ import UIKit
 
 class ScalesViewController: UIViewController {
     
-    var scales : [GuitarScale] = []
+    var scales: [GuitarScale] = []
     
-    lazy var collectionView : UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
@@ -30,7 +30,7 @@ class ScalesViewController: UIViewController {
         return collectionView
     }()
     
-    let spinner : UIActivityIndicatorView = {
+    let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
         spinner.hidesWhenStopped = true
         spinner.layer.zPosition = -1
@@ -50,7 +50,12 @@ class ScalesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange
-        updateScalesFromWeb()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if scales.isEmpty {
+            updateScalesFromWeb()
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -74,47 +79,44 @@ class ScalesViewController: UIViewController {
     }
     
     private func updateScalesFromWeb() {
-        NetworkService().getScales(completion: { scalesDTO in
-            self.scales = scalesDTO.map({ scaleDTO in
-                let scale = GuitarScale()
-                scale.name = scaleDTO.name
-                scale.notes = scaleDTO.notes
-                return scale
-            })
+        ScalesNetworkService().get(completion: { scalesOrNil in
+            guard let scales = scalesOrNil else {
+                DispatchQueue.main.async {
+                    self.showAlert()
+                }
+                return
+            }
+            self.scales = scales
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.spinner.stopAnimating()
             }
-            let queue = DispatchQueue(label: "", attributes: .concurrent)
-            queue.async {
-                let group = DispatchGroup()
-                for (scale, scaleDTO) in zip(self.scales, scalesDTO) {
-                    group.enter()
-                    NetworkService().getImageData(from: scaleDTO.imgLinkLight, with: { data in
-                        guard let imageData = data else { return }
-                        scale.imageData = imageData
-                        group.leave()
-                    })
-                }
-                group.notify(queue: DispatchQueue.main) {
-                    self.collectionView.reloadData()
-                    self.spinner.stopAnimating()
-                }
-            }
+            
         })
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Something went bab with network", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
-extension ScalesViewController : UICollectionViewDelegate {
+extension ScalesViewController: UICollectionViewDelegate {
     
 }
 
-extension ScalesViewController : UICollectionViewDataSource {
+extension ScalesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return scales.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScaleCollectionViewCell.reuseID, for: indexPath) as! ScaleCollectionViewCell
+        let cellOrNil = collectionView.dequeueReusableCell(withReuseIdentifier: ScaleCollectionViewCell.reuseID,
+                                                           for: indexPath) as? ScaleCollectionViewCell
+        guard let cell = cellOrNil else {
+            return UICollectionViewCell()
+        }
         let scale = scales[indexPath.row]
         cell.titleLabel.text = scale.name
         cell.scaleLabel.text = scale.notes.reduce("", { (result, element) in
@@ -145,6 +147,3 @@ extension ScalesViewController: UICollectionViewDelegateFlowLayout {
         return 1.0
     }
 }
-
-
-

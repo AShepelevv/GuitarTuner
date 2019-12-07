@@ -9,11 +9,9 @@
 import UIKit
 
 class ScaleCollectionViewCell: UICollectionViewCell {
-    
-    
-    
-    static let reuseID : String = "ScaleCollectionViewCell"
-    
+
+    static let reuseID: String = "ScaleCollectionViewCell"
+
     static let MARGIN: CGFloat = 10.0
 
     let insideView: UIView = {
@@ -27,16 +25,16 @@ class ScaleCollectionViewCell: UICollectionViewCell {
 //        view.layer.shouldRasterize = true
         return view
     }()
-    
-    let imageView : UIImageView = {
+
+    let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = MARGIN
         return imageView
     }()
-    
-    let titleLabel : UILabel = {
+
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .graphite
         label.textAlignment = .center
@@ -47,7 +45,7 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 0
         return label
     }()
-    
+
     let scaleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .graphite
@@ -58,37 +56,34 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 0
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
         layoutSubviews()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
     override func layoutSubviews() {
         contentView.addSubview(insideView)
         insideView.addSubview(titleLabel)
         insideView.addSubview(scaleLabel)
         insideView.addSubview(imageView)
-    
-        
+
         insideView.translatesAutoresizingMaskIntoConstraints = false
         insideView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2 * ScaleCollectionViewCell.MARGIN).isActive = true
         insideView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -2 * ScaleCollectionViewCell.MARGIN).isActive = true
         insideView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 2 * ScaleCollectionViewCell.MARGIN).isActive = true
         insideView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -2 * ScaleCollectionViewCell.MARGIN).isActive = true
-        
+
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.topAnchor.constraint(equalTo: insideView.topAnchor, constant: 2 * ScaleCollectionViewCell.MARGIN).isActive = true
         imageView.leadingAnchor.constraint(equalTo: insideView.leadingAnchor, constant: 2 * ScaleCollectionViewCell.MARGIN).isActive = true
         imageView.trailingAnchor.constraint(equalTo: insideView.trailingAnchor, constant: -2 * ScaleCollectionViewCell.MARGIN).isActive = true
-//        imageView.heightAnchor.constraint(lessThanOrEqualTo: insideView.heightAnchor, multiplier: 0.5, constant: -2 * ScaleCollectionViewCell.MARGIN).isActive = true
-        
+
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(greaterThanOrEqualTo: imageView.bottomAnchor, constant: 2 * ScaleCollectionViewCell.MARGIN).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: insideView.leadingAnchor, constant: ScaleCollectionViewCell.MARGIN).isActive = true
@@ -102,6 +97,5 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         scaleLabel.trailingAnchor.constraint(equalTo: insideView.trailingAnchor, constant: -2 * ScaleCollectionViewCell.MARGIN).isActive = true
         scaleLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-    
 
 }

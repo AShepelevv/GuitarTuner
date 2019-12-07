@@ -7,9 +7,9 @@
 //
 
 struct Point2D {
-    var x : Double
-    var y : Double
-    
+    var x: Double
+    var y: Double
+
     init(_ x: Double, _ y: Double) {
         self.x = x
         self.y = y

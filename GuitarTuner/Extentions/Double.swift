@@ -13,7 +13,7 @@ infix operator ~
 extension Double {
 
     static let eps: Double = pow(10, -6)
-    
+
     static func ~ (lhs: Double, rhs: Double) -> Bool {
         return abs(lhs - rhs) < Double.eps
     }

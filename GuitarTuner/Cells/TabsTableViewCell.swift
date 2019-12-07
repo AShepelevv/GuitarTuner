@@ -9,21 +9,22 @@
 import UIKit
 
 class TabsTableViewCell: UITableViewCell {
-    
-    static let reuseID : String = "TabTableViewCell"
+
+    static let reuseID: String = "TabTableViewCell"
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: ScaleCollectionViewCell.reuseID)
         backgroundColor = .clear
+        textLabel?.textColor = .graphite
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

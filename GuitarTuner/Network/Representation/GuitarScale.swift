@@ -8,11 +8,18 @@
 
 import Foundation
 
-class GuitarScaleDTO: Decodable {
+class GuitarScaleJSON: Decodable {
     var name: String = ""
     var imgLinkLight: String = ""
     var imgLinkDark: String = ""
     var notes: [String] = []
+    
+    func toGuitarScale() -> GuitarScale {
+        let scale = GuitarScale()
+        scale.name = self.name
+        scale.notes = self.notes
+        return scale
+    }
 }
 
 class GuitarScale: Decodable {
