@@ -10,10 +10,13 @@ import UIKit
 
 class ScalesViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var scales: [GuitarScale] = []
     
+    // MARK: - UI
+    
     lazy var collectionView: UICollectionView = {
-        
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
@@ -35,21 +38,35 @@ class ScalesViewController: UIViewController {
         spinner.hidesWhenStopped = true
         spinner.layer.zPosition = -1
         spinner.startAnimating()
+        spinner.style = .gray
         return spinner
     }()
     
+    lazy var reloadButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "reload"), for: .normal)
+        button.addTarget(self, action: #selector(reloadButtonTapped), for: .touchUpInside)
+        button.isHidden = true
+        return button
+    }()
+    
+    // MARK: - Init
+    
     init() {
         super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(title: "Scales", image: UIImage(named: "scale"), selectedImage: nil)
+        self.title = "Scales"
+        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: "scale"), selectedImage: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = Color.white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,9 +75,12 @@ class ScalesViewController: UIViewController {
         }
     }
     
+    // MARK: - Layout
+    
     override func viewWillLayoutSubviews() {
         view.addSubview(collectionView)
         view.addSubview(spinner)
+        view.addSubview(reloadButton)
         
         let safeArea = view.safeAreaLayoutGuide
         
@@ -70,13 +90,21 @@ class ScalesViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         
+        spinner.startAnimating()
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         spinner.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor).isActive = true
-        spinner.startAnimating()
         spinner.widthAnchor.constraint(equalToConstant: 50).isActive = true
         spinner.heightAnchor.constraint(equalTo: spinner.widthAnchor).isActive = true
+        
+        reloadButton.translatesAutoresizingMaskIntoConstraints = false
+        reloadButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
+        reloadButton.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor).isActive = true
+        reloadButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        reloadButton.heightAnchor.constraint(equalTo: spinner.widthAnchor).isActive = true
     }
+    
+    // MARK: - Data manipulation
     
     private func updateScalesFromWeb() {
         ScalesNetworkService().get(completion: { scalesOrNil in
@@ -91,20 +119,33 @@ class ScalesViewController: UIViewController {
                 self.collectionView.reloadData()
                 self.spinner.stopAnimating()
             }
-            
         })
     }
     
     private func showAlert() {
         let alert = UIAlertController(title: "Something went bab with network", message: "", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
+            self.spinner.stopAnimating()
+            self.reloadButton.isHidden = false
+        }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @objc
+    private func reloadButtonTapped() {
+        updateScalesFromWeb()
+        reloadButton.isHidden = true
+        spinner.startAnimating()
+    }
 }
+
+// MARK: - UICollectionViewDelegate
 
 extension ScalesViewController: UICollectionViewDelegate {
     
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension ScalesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -127,6 +168,8 @@ extension ScalesViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension ScalesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,

@@ -20,8 +20,8 @@ class SpectrumView: UIView {
         static let labelHeight: CGFloat = 20.0
     }
 
-    var startColor: UIColor = .orange
-    var endColor: UIColor = .graphite
+    var startColor: UIColor = Color.orange
+    var endColor: UIColor = Color.graphite
 
     var graphPoints: [Point2D] = [Point2D(0, 0)]
     var scale: Double = 1.0
@@ -76,8 +76,8 @@ class SpectrumView: UIView {
         width = rect.width
         height = rect.height
 
-        UIColor.white.setFill()
-        UIColor.white.setStroke()
+        Color.white.setFill()
+        Color.white.setStroke()
 
         if !graphPoints.isEmpty {
             let graphPath = plot()
@@ -146,7 +146,7 @@ class SpectrumView: UIView {
         for _ in 1...xLabelsCount {
             let label = UILabel()
             label.textAlignment = .center
-            label.textColor = .white
+            label.textColor = Color.white
             label.font = UIFont(name: "Courier", size: 10.0)
             xLabelsStackView.addArrangedSubview(label)
         }

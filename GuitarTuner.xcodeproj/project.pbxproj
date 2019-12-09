@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5317A54A239E5C3300B8F9AA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317A549239E5C3300B8F9AA /* TabBarController.swift */; };
 		531AA5D5238D91BA00564154 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5D4238D91BA00564154 /* NotesTests.swift */; };
 		531AA5D6238DABB700564154 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534AEEF9238D1CA100E45A25 /* Notes.swift */; };
 		531AA5D8238DAC0900564154 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3CB92383373C00AADFCE /* TunerViewController.swift */; };
@@ -14,8 +15,6 @@
 		531AA5DA238DAC1400564154 /* FrequencyDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A34141238C266700B23136 /* FrequencyDialView.swift */; };
 		531AA5DC238E696B00564154 /* ScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5DB238E696B00564154 /* ScalesViewController.swift */; };
 		531AA5DE238E69BC00564154 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5DD238E69BC00564154 /* TabsViewController.swift */; };
-		531AA5E1238E6A0A00564154 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5E0238E6A0A00564154 /* SettingsViewController.swift */; };
-		531AA5E2238E6A0A00564154 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5E0238E6A0A00564154 /* SettingsViewController.swift */; };
 		532F3C8E238335DA00AADFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3C8D238335DA00AADFCE /* AppDelegate.swift */; };
 		532F3C9A238335DB00AADFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532F3C99238335DB00AADFCE /* Assets.xcassets */; };
 		532F3C9D238335DB00AADFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532F3C9B238335DB00AADFCE /* LaunchScreen.storyboard */; };
@@ -32,6 +31,7 @@
 		536D4CE8238FCDDB0004DC1E /* ScalesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CE7238FCDDB0004DC1E /* ScalesNetworkService.swift */; };
 		536D4CEE238FCFA00004DC1E /* GuitarScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CED238FCFA00004DC1E /* GuitarScale.swift */; };
 		536D4CF0238FCFF90004DC1E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CEF238FCFF90004DC1E /* RequestType.swift */; };
+		5378C396239C1ADE000CAE49 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378C395239C1ADE000CAE49 /* NavigationController.swift */; };
 		538378A52388158F00582497 /* SpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538378A42388158F00582497 /* SpectrumView.swift */; };
 		538A89BF23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89BE23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift */; };
 		538A89C12391A02A00869B30 /* Spectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C02391A02A00869B30 /* Spectrum.swift */; };
@@ -49,6 +49,7 @@
 		53C6535C239902FB0041BD64 /* Datamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53C6535A239902FB0041BD64 /* Datamodel.xcdatamodeld */; };
 		53C6535F2399035D0041BD64 /* MOTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6535E2399035D0041BD64 /* MOTabs.swift */; };
 		53C65361239903C20041BD64 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C65360239903C20041BD64 /* CoreDataService.swift */; };
+		53C7B541239C0F2200138336 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C7B540239C0F2200138336 /* Color.swift */; };
 		53D0BFDD238FE9CC00F1B585 /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0BFDC238FE9CC00F1B585 /* ScaleCollectionViewCell.swift */; };
 		53D0BFE12390124900F1B585 /* TabsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0BFE02390124900F1B585 /* TabsTableViewCell.swift */; };
 		53D0BFE32390166900F1B585 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0BFE22390166900F1B585 /* WebViewController.swift */; };
@@ -73,12 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5317A549239E5C3300B8F9AA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		531AA5C9238D909A00564154 /* GuitarTunerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarTunerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		531AA5CD238D909A00564154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		531AA5D4238D91BA00564154 /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
 		531AA5DB238E696B00564154 /* ScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesViewController.swift; sourceTree = "<group>"; };
 		531AA5DD238E69BC00564154 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
-		531AA5E0238E6A0A00564154 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		532F3C8A238335DA00AADFCE /* GuitarTuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarTuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		532F3C8D238335DA00AADFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		532F3C99238335DB00AADFCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		536D4CE7238FCDDB0004DC1E /* ScalesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesNetworkService.swift; sourceTree = "<group>"; };
 		536D4CED238FCFA00004DC1E /* GuitarScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarScale.swift; sourceTree = "<group>"; };
 		536D4CEF238FCFF90004DC1E /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		5378C395239C1ADE000CAE49 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		538378A42388158F00582497 /* SpectrumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumView.swift; sourceTree = "<group>"; };
 		538A89BE23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectralAudioFileAnalyzer.swift; sourceTree = "<group>"; };
 		538A89C02391A02A00869B30 /* Spectrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spectrum.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		53C6535B239902FB0041BD64 /* Datamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Datamodel.xcdatamodel; sourceTree = "<group>"; };
 		53C6535E2399035D0041BD64 /* MOTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOTabs.swift; sourceTree = "<group>"; };
 		53C65360239903C20041BD64 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		53C7B540239C0F2200138336 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		53D0BFDC238FE9CC00F1B585 /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		53D0BFE02390124900F1B585 /* TabsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTableViewCell.swift; sourceTree = "<group>"; };
 		53D0BFE22390166900F1B585 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5317A548239E5C0C00B8F9AA /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				5317A549239E5C3300B8F9AA /* TabBarController.swift */,
+			);
+			path = TabBars;
+			sourceTree = "<group>";
+		};
 		531AA5CA238D909A00564154 /* GuitarTunerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,12 +188,15 @@
 			isa = PBXGroup;
 			children = (
 				532F3C9E238335DB00AADFCE /* Info.plist */,
+				53A34140238C1E9900B23136 /* Core */,
+				5317A548239E5C0C00B8F9AA /* TabBars */,
+				5378C394239C1ACB000CAE49 /* NavigationControllers */,
+				53C7B53F239C0F0B00138336 /* Colors */,
 				53C65357239902B40041BD64 /* CoreData */,
 				532186642394108D00CF576E /* Notes */,
 				538A89C72391A16700869B30 /* Extentions */,
 				538A89BB23918A7600869B30 /* Fourier */,
 				536D4CE9238FCE000004DC1E /* Network */,
-				53A34140238C1E9900B23136 /* Core */,
 				532F3CB82383371400AADFCE /* Screens */,
 				538378A62388159400582497 /* Views */,
 				53D0BFDF238FE9E700F1B585 /* Cells */,
@@ -196,7 +210,6 @@
 				532F3CB92383373C00AADFCE /* TunerViewController.swift */,
 				531AA5DB238E696B00564154 /* ScalesViewController.swift */,
 				531AA5DD238E69BC00564154 /* TabsViewController.swift */,
-				531AA5E0238E6A0A00564154 /* SettingsViewController.swift */,
 				53D0BFE22390166900F1B585 /* WebViewController.swift */,
 			);
 			path = Screens;
@@ -233,6 +246,14 @@
 				536D4CED238FCFA00004DC1E /* GuitarScale.swift */,
 			);
 			path = Representation;
+			sourceTree = "<group>";
+		};
+		5378C394239C1ACB000CAE49 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5378C395239C1ADE000CAE49 /* NavigationController.swift */,
+			);
+			path = NavigationControllers;
 			sourceTree = "<group>";
 		};
 		538378A62388159400582497 /* Views */ = {
@@ -300,6 +321,14 @@
 				53C6535E2399035D0041BD64 /* MOTabs.swift */,
 			);
 			path = ModelObjects;
+			sourceTree = "<group>";
+		};
+		53C7B53F239C0F0B00138336 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				53C7B540239C0F2200138336 /* Color.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		53D0BFDF238FE9E700F1B585 /* Cells */ = {
@@ -445,7 +474,6 @@
 				53C653502398FA850041BD64 /* NetworkServiceTest.swift in Sources */,
 				531AA5D5238D91BA00564154 /* NotesTests.swift in Sources */,
 				531AA5D8238DAC0900564154 /* TunerViewController.swift in Sources */,
-				531AA5E2238E6A0A00564154 /* SettingsViewController.swift in Sources */,
 				5354421C2393D571006CB0E1 /* Int.swift in Sources */,
 				5354421D2393D573006CB0E1 /* Double.swift in Sources */,
 				535442182393D404006CB0E1 /* Protocols.swift in Sources */,
@@ -469,12 +497,14 @@
 				536D4CE8238FCDDB0004DC1E /* ScalesNetworkService.swift in Sources */,
 				53A34142238C266700B23136 /* FrequencyDialView.swift in Sources */,
 				536D4CF0238FCFF90004DC1E /* RequestType.swift in Sources */,
+				5317A54A239E5C3300B8F9AA /* TabBarController.swift in Sources */,
 				538A89C92391A17100869B30 /* Int.swift in Sources */,
 				532F3C8E238335DA00AADFCE /* AppDelegate.swift in Sources */,
 				538378A52388158F00582497 /* SpectrumView.swift in Sources */,
 				536D4CEE238FCFA00004DC1E /* GuitarScale.swift in Sources */,
 				532F3CBA2383373C00AADFCE /* TunerViewController.swift in Sources */,
 				531AA5DE238E69BC00564154 /* TabsViewController.swift in Sources */,
+				53C7B541239C0F2200138336 /* Color.swift in Sources */,
 				53C653522398FAF70041BD64 /* NetworkService.swift in Sources */,
 				531AA5DC238E696B00564154 /* ScalesViewController.swift in Sources */,
 				534AEEFA238D1CA100E45A25 /* Notes.swift in Sources */,
@@ -482,11 +512,11 @@
 				53C6535C239902FB0041BD64 /* Datamodel.xcdatamodeld in Sources */,
 				538A89BF23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift in Sources */,
 				538A89C52391A07E00869B30 /* FourierTransformer.swift in Sources */,
+				5378C396239C1ADE000CAE49 /* NavigationController.swift in Sources */,
 				53D0BFDD238FE9CC00F1B585 /* ScaleCollectionViewCell.swift in Sources */,
 				53C65361239903C20041BD64 /* CoreDataService.swift in Sources */,
 				538A89C32391A05700869B30 /* Protocols.swift in Sources */,
 				53C65359239902C70041BD64 /* CoreDataStack.swift in Sources */,
-				531AA5E1238E6A0A00564154 /* SettingsViewController.swift in Sources */,
 				538A89C12391A02A00869B30 /* Spectrum.swift in Sources */,
 				53544212239289DD006CB0E1 /* Double.swift in Sources */,
 				53D0BFE32390166900F1B585 /* WebViewController.swift in Sources */,
@@ -602,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -656,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -673,7 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = GuitarTuner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,7 +722,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = GuitarTuner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

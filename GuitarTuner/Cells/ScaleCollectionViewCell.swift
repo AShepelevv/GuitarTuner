@@ -10,19 +10,21 @@ import UIKit
 
 class ScaleCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - Properties
+    
     static let reuseID: String = "ScaleCollectionViewCell"
-
     static let MARGIN: CGFloat = 10.0
 
+    // MARK: - UI
+    
     let insideView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = Color.orange
         view.layer.cornerRadius = MARGIN
         view.layer.shadowColor = UIColor.lightGray.cgColor
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = MARGIN
         view.layer.shadowOpacity = 1.0
-//        view.layer.shouldRasterize = true
         return view
     }()
 
@@ -36,10 +38,10 @@ class ScaleCollectionViewCell: UICollectionViewCell {
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .graphite
+        label.textColor = Color.graphite
         label.textAlignment = .center
         let fontDescriptor = UIFont.systemFont(ofSize: 30.0, weight: .bold).fontDescriptor
-        label.font = UIFont(descriptor: fontDescriptor.withDesign(.serif)!, size: 0.0)
+        label.font = UIFont(name: "Courier", size: 27)
         label.adjustsFontSizeToFitWidth = true
         label.text = ""
         label.numberOfLines = 0
@@ -48,7 +50,7 @@ class ScaleCollectionViewCell: UICollectionViewCell {
 
     let scaleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .graphite
+        label.textColor = Color.graphite
         label.textAlignment = .center
         label.font = UIFont(name: "Courier-Bold", size: 27)
         label.adjustsFontSizeToFitWidth = true
@@ -56,6 +58,8 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 0
         return label
     }()
+    
+    // MARK: - Init
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,6 +70,8 @@ class ScaleCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Layout
 
     override func layoutSubviews() {
         contentView.addSubview(insideView)

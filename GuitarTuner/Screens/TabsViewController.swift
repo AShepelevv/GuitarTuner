@@ -11,37 +11,49 @@ import CoreData
 
 class TabsViewController: UIViewController {
     
-    var tableView = UITableView()
+    // MARK: - Properties
+    
     let coreDataService = CoreDataService()
     var tabsList: [MOTabs] = []
-    let refreshControll = UIRefreshControl()
     var fetchResultController: NSFetchedResultsController<MOTabs>!
+    
+    // MARK: - UI
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TabsTableViewCell.self, forCellReuseIdentifier: TabsTableViewCell.reuseID)
+        tableView.frame = view.frame
+        tableView.backgroundColor = Color.white
+        return tableView
+    }()
+    
+    // MARK: - Init
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(title: "Tabs", image: UIImage(named: "tabs"), selectedImage: nil)
+        self.title = "Tabs"
+        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: "tabs"), selectedImage: nil)
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = Color.white
         
         let button = UIButton()
-        button.imageView?.image = UIImage(named: "plus")
+        button.setImage(UIImage(named: "plus"), for: .normal)
         button.addTarget(self, action: #selector(addTabs), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
         navigationItem.rightBarButtonItem = barButtonItem
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(TabsTableViewCell.self, forCellReuseIdentifier: TabsTableViewCell.reuseID)
-        tableView.frame = view.frame
-        tableView.backgroundColor = .white
         
         self.fetchResultController = coreDataService.getFetcResultsController()
         self.fetchResultController.delegate = self
@@ -64,7 +76,14 @@ class TabsViewController: UIViewController {
     private func addTabs() {
         let alert = UIAlertController(title: "Something went bab with network", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(configurationHandler: { $0.placeholder = "Title" })
-        alert.addTextField(configurationHandler: { $0.placeholder = "Link" })
+        alert.addTextField(configurationHandler: {
+            $0.placeholder = "Link"
+            if let copiedText = UIPasteboard.general.string {
+                $0.text = copiedText
+            } else {
+                $0.placeholder = "Link"
+            }
+        })
         alert.addAction(
             UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { _ in
                 guard let title = alert.textFields?[0].text else { return }
@@ -78,18 +97,15 @@ class TabsViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegatele
+
 extension TabsViewController: UITableViewDelegate {
     
 }
 
+// MARK: - UITableViewDataSource
+
 extension TabsViewController: UITableViewDataSource {
-    //    func numberOfSections(in tableView: UITableView) -> Int {
-    //        if let frc = fetchResultController {
-    //            return frc.sections!.count
-    //        }
-    //        return 0
-    //    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections = self.fetchResultController.sections else {
             fatalError("No sections in fetchedResultsController")
@@ -119,47 +135,27 @@ extension TabsViewController: UITableViewDataSource {
         webVC.link = tabs.link
         webVC.title = tabs.title
         navigationController?.pushViewController(webVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            print("1")
             let tabs = fetchResultController.object(at: indexPath)
-            //            fetchResultController.managedObjectContext.delete(tabs)
             coreDataService.delete(tabs)
-        default:
-            print("$__$")
+        default: break
         }
     }
-    
-    //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    //        guard let sectionInfo = fetchResultController?.sections?[section] else {
-    //            return nil
-    //        }
-    //        return sectionInfo.name
-    //    }
-    
-    //    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-    //        return fetchResultController?.sectionIndexTitles
-    //    }
-    //
-    //    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-    //        guard let result = fetchResultController?.section(forSectionIndexTitle: title, at: index) else {
-    //            fatalError("Unable to locate section for \(title) at index: \(index)")
-    //        }
-    //        return result
-    //    }
 }
+
+// MARK: - NSFetchedResultsControllerDelegatex
 
 extension TabsViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        print("=)")
         self.tableView.beginUpdates()
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        print("=(")
         self.tableView.endUpdates()
     }
     
@@ -174,20 +170,11 @@ extension TabsViewController: NSFetchedResultsControllerDelegate {
                 tableView.insertRows(at: [indexPath], with: .fade)
             }
         case .delete:
-            print(2)
             self.tableView.reloadSections([0], with: .middle)
             if let indexPath = newIndexPath {
                 tableView.deleteRows(at: [indexPath], with: .left)
             }
-        default:
-            print("0__0")
+        default: break
         }
     }
-    
-    //    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
-    //                    didChange sectionInfo: NSFetchedResultsSectionInfo,
-    //                    atSectionIndex sectionIndex: Int,
-    //                    for type: NSFetchedResultsChangeType) {
-    //        <#code#>
-    //    }
 }

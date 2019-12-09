@@ -15,7 +15,9 @@ class TabsTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: ScaleCollectionViewCell.reuseID)
         backgroundColor = .clear
-        textLabel?.textColor = .graphite
+        textLabel?.textColor = Color.graphite
+        textLabel?.font = UIFont(name: "Courier", size: 15)
+        self.selectionStyle = .none
     }
 
     required init?(coder: NSCoder) {

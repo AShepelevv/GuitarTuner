@@ -8,14 +8,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let tabBarController = UITabBarController()
-        tabBarController.tabBar.tintColor = .orange
-        tabBarController.tabBar.barTintColor = .graphite
-        tabBarController.tabBar.isTranslucent = false
-        tabBarController.viewControllers = [TunerViewController(),
-                                            ScalesViewController(),
-                                            UINavigationController(rootViewController: TabsViewController()),
-                                            SettingsViewController()]
+        let tabBarController = TabBarController()
+        tabBarController.viewControllers = [NavigationController(rootViewController: TunerViewController()),
+                                            NavigationController(rootViewController: ScalesViewController()),
+                                            NavigationController(rootViewController: TabsViewController())]
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         return true

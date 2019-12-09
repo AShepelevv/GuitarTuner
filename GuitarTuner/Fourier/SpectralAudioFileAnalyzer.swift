@@ -27,8 +27,8 @@ class SpectralAudioFileAnalyzer {
             let (i, amplitude) = arg
             return Point2D(file.fileFormat.sampleRate / Double(length) * Double(i), amplitude)
         })
-        let max = spectrumData.max() ?? spectrum[0].y
-        let frequences = spectrum.filter({ $0.y / max > cutLevel }).map({ $0.x })
+        let max = (spectrumData.max() ?? spectrum[0].y)
+        let frequences = spectrum.filter({ $0.y >= cutLevel * max }).map({ $0.x })
 
         let frequency = frequences.reduce(0, { $0 + $1 }) / Double(frequences.count)
         spectrum = spectrum.filter({ $0.x < maxFrequency })

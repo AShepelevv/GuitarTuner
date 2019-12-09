@@ -6,45 +6,27 @@
 //  Copyright © 2019 ashepelev. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import AVFoundation
 import Accelerate
-
-class AnalyseData {
-    let frequency: Double
-    let spectrum: [Double]
-    let scale: Double
-
-    init(frequency: Double, spectrum: [Double], scale: Double) {
-        self.frequency = frequency
-        self.spectrum = spectrum
-        self.scale = scale
-    }
-}
 
 let MARGIN: CGFloat = 10
 
 class TunerViewController: UIViewController {
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(title: "Tuner", image: UIImage(named: "tuner"), selectedImage: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    // MARK: - Properties
 
     var audioSession: AVAudioSession!
     var recorder: AVAudioRecorder!
     var timer: Timer!
-
+    
     let fileName = "recording.m4a"
+    
+    // MARK: - UI
 
     let noteLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .graphite
+        label.textColor = Color.graphite
         label.textAlignment = .center
         label.font = UIFont(name: "Courier", size: 70)
         label.text = ""
@@ -54,7 +36,7 @@ class TunerViewController: UIViewController {
 
     let gapLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .graphite
+        label.textColor = Color.graphite
         label.textAlignment = .center
         label.font = UIFont(name: "Courier", size: 20)
         label.text = ""
@@ -64,7 +46,7 @@ class TunerViewController: UIViewController {
 
     let frequencyLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .graphite
+        label.textColor = Color.graphite
         label.textAlignment = .center
         label.font = UIFont(name: "Courier", size: 30)
         label.text = ""
@@ -82,10 +64,25 @@ class TunerViewController: UIViewController {
         let dialView = FrequencyDialView()
         return dialView
     }()
+    
+    // MARK: - Init
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.title = "Tuner"
+        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: "tuner"), selectedImage: nil)
+        tabBarItem.setTitleTextAttributes([.font: UIFont(name: "Courier", size: 10)!], for: .application)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = Color.white
         setupAudioSession()
     }
 
@@ -139,26 +136,25 @@ class TunerViewController: UIViewController {
         gapLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         gapLabel.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -4 * MARGIN).isActive = true
     }
-
+    
+    // MARK: - Analyzing audio
+    
     @objc
     private func update() {
         recorder.stop()
         do {
             let file = try AVAudioFile(forReading: getFileURL())
+            
             guard let spectrum = analyseAudioFile(file) else { return }
-
-            frequencyLabel.text = "\(String(format: "%.1f", spectrum.frequency)) Hz"
             let (note, gap) = Notes().getNearestNote(for: spectrum.frequency)
+            
+            frequencyLabel.text = "\(String(format: "%.1f", spectrum.frequency)) Hz"
             noteLabel.text = note.name
-            if abs(gap) < 0.5 {
-                noteLabel.textColor = .green
-                gapLabel.text = ""
-            } else {
-                noteLabel.textColor = .graphite
-                gapLabel.text = String(format: "\(gap < 0 ? "-" : "+")%.1f", abs(gap))
-            }
+            updateGapLabel(gap)
+            
             graph.graphPoints = spectrum.spectrum
             graph.setNeedsDisplay()
+            
             dialView.moveTo(spectrum.frequency)
         } catch {
             print("Could not get file from URL. Reason: \(error)")
@@ -170,6 +166,18 @@ class TunerViewController: UIViewController {
         let spectralAnalyzer = SpectralAudioFileAnalyzer(transformer: FourierTransformer())
         return spectralAnalyzer.spectrum(file: file, duration: 1.5)
     }
+    
+    private func updateGapLabel(_ gap: Double) {
+        if abs(gap) < 0.5 {
+            noteLabel.textColor = .green
+            gapLabel.text = ""
+        } else {
+            noteLabel.textColor = Color.graphite
+            gapLabel.text = String(format: "\(gap < 0 ? "-" : "+")%.1f", abs(gap))
+        }
+    }
+    
+    // MARK: - Setup audio recording
 
     private func setupAudioSession () {
         audioSession = AVAudioSession.sharedInstance()
@@ -204,7 +212,6 @@ class TunerViewController: UIViewController {
     }
 
     private func getFileURL() -> URL {
-        return getDocumentsDirectory().appendingPathComponent("recording.m4a")
-//        return Bundle.main.url(forResource: "E4E3", withExtension: "wav")!
+        return getDocumentsDirectory().appendingPathComponent(fileName)
     }
 }
