@@ -34,7 +34,7 @@ class FourierTests: XCTestCase {
         let analyzer = SpectralAudioFileAnalyzer(transformer: transformer)
         
         //Act
-        return analyzer.spectrum(file: file, duration: 1.5)
+        return analyzer.spectrum(file: file, duration: 1.5, maxFrequency: Settings.maxFrequency)
     }
 
     func testThatTransformGetCorrectFrequencyFromMonohromeSignalFor300Hz() {

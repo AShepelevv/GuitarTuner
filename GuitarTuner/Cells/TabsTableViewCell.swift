@@ -16,7 +16,7 @@ class TabsTableViewCell: UITableViewCell {
         super.init(style: .default, reuseIdentifier: ScaleCollectionViewCell.reuseID)
         backgroundColor = .clear
         textLabel?.textColor = Color.graphite
-        textLabel?.font = UIFont(name: "Courier", size: 15)
+        textLabel?.font = UIFont(name: Settings.fontName, size: 15)
         self.selectionStyle = .none
     }
 

@@ -28,7 +28,7 @@ class TunerViewController: UIViewController {
         let label = UILabel()
         label.textColor = Color.graphite
         label.textAlignment = .center
-        label.font = UIFont(name: "Courier", size: 70)
+        label.font = UIFont(name: Settings.fontName, size: 70)
         label.text = ""
         label.numberOfLines = 0
         return label
@@ -38,7 +38,7 @@ class TunerViewController: UIViewController {
         let label = UILabel()
         label.textColor = Color.graphite
         label.textAlignment = .center
-        label.font = UIFont(name: "Courier", size: 20)
+        label.font = UIFont(name: Settings.fontName, size: 20)
         label.text = ""
         label.numberOfLines = 0
         return label
@@ -48,7 +48,7 @@ class TunerViewController: UIViewController {
         let label = UILabel()
         label.textColor = Color.graphite
         label.textAlignment = .center
-        label.font = UIFont(name: "Courier", size: 30)
+        label.font = UIFont(name: Settings.fontName, size: 30)
         label.text = ""
         label.numberOfLines = 0
         return label
@@ -71,7 +71,7 @@ class TunerViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.title = "Tuner"
         tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: "tuner"), selectedImage: nil)
-        tabBarItem.setTitleTextAttributes([.font: UIFont(name: "Courier", size: 10)!], for: .application)
+        tabBarItem.setTitleTextAttributes([.font: UIFont(name: Settings.fontName, size: 10)!], for: .application)
     }
 
     required init?(coder: NSCoder) {
@@ -164,7 +164,7 @@ class TunerViewController: UIViewController {
 
     private func analyseAudioFile(_ file: AVAudioFile) -> Spectrum? {
         let spectralAnalyzer = SpectralAudioFileAnalyzer(transformer: FourierTransformer())
-        return spectralAnalyzer.spectrum(file: file, duration: 1.5)
+        return spectralAnalyzer.spectrum(file: file, duration: 1.5, maxFrequency: Settings.maxFrequency)
     }
     
     private func updateGapLabel(_ gap: Double) {

@@ -23,7 +23,7 @@ class NavigationController: UINavigationController {
     
     private func setupTabBar() {
         self.navigationBar.barTintColor = Color.navBarColor
-        if let font = UIFont(name: "Courier-Bold", size: 20) {
+        if let font = UIFont(name: "\(Settings.fontName)-Bold", size: 20) {
             self.navigationBar.titleTextAttributes = [.foregroundColor: Color.navBarTitleColor, .font: font]
         }
         self.navigationBar.isTranslucent = false

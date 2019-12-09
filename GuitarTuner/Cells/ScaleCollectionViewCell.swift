@@ -41,7 +41,7 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         label.textColor = Color.graphite
         label.textAlignment = .center
         let fontDescriptor = UIFont.systemFont(ofSize: 30.0, weight: .bold).fontDescriptor
-        label.font = UIFont(name: "Courier", size: 27)
+        label.font = UIFont(name: Settings.fontName, size: 27)
         label.adjustsFontSizeToFitWidth = true
         label.text = ""
         label.numberOfLines = 0
@@ -52,7 +52,7 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = Color.graphite
         label.textAlignment = .center
-        label.font = UIFont(name: "Courier-Bold", size: 27)
+        label.font = UIFont(name: Settings.fontName, size: 27)
         label.adjustsFontSizeToFitWidth = true
         label.text = ""
         label.numberOfLines = 0

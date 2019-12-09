@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ScalesNetworkService {
+class ScalesNetworkService: NetworkService {
     let apiKey = "AIzaSyC0XRhbPofNoCRZNC_OFzufY6g2yGxULL4"
-    private func link(of requestType: RequestType) -> String {
+    func link(of requestType: RequestType) -> String {
         return "https://cool-project-a6425.firebaseio.com/\(requestType).json"
     }
-    let session: URLSession = {
+    var session: URLSession {
         return URLSession.shared
-    }()
+    }
     
     func get(completion: @escaping ([GuitarScale]?) -> Void) {
         var scales = [GuitarScale]()
@@ -43,7 +43,10 @@ class ScalesNetworkService {
     }
     
     func getScalesData(completion: @escaping ([GuitarScaleJSON]?) -> Void) {
-        let url = URL(string: link(of: .scales))!
+        guard let url = URL(string: link(of: .scales)) else {
+            completion(nil)
+            return
+        }
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60)
         let task = session.dataTask(with: request) { dataOrNil, _, error in
             guard let data = dataOrNil else {
@@ -63,7 +66,10 @@ class ScalesNetworkService {
     }
 
     func getImageData(from link: String, with completion: @escaping (Data?) -> Void) {
-        let url = URL(string: link)!
+        guard let url = URL(string: link) else {
+            completion(nil)
+            return
+        }
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 120)
         let task = session.dataTask(with: request) { data, _, _ in
             if let imageData = data {

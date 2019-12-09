@@ -15,8 +15,8 @@ class TabBarController: UITabBarController {
         self.tabBar.tintColor = Color.orange
         self.tabBar.barTintColor = Color.graphite
         self.tabBar.isTranslucent = false
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Courier", size: 10)!], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Courier", size: 10)!], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Settings.fontName, size: 10)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Settings.fontName, size: 10)!], for: .selected)
     }
     
     required init?(coder: NSCoder) {

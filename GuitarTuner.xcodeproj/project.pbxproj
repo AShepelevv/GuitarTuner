@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5317A54A239E5C3300B8F9AA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317A549239E5C3300B8F9AA /* TabBarController.swift */; };
+		5317A54C239E679300B8F9AA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317A54B239E679300B8F9AA /* Settings.swift */; };
+		5317A54D239E6D5C00B8F9AA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317A54B239E679300B8F9AA /* Settings.swift */; };
+		5317A54E239E6DBF00B8F9AA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C7B540239C0F2200138336 /* Color.swift */; };
+		5317A550239E6F9C00B8F9AA /* ScalesNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317A54F239E6F9C00B8F9AA /* ScalesNetworkServiceTests.swift */; };
+		5317A551239E6FA700B8F9AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532F3C99238335DB00AADFCE /* Assets.xcassets */; };
+		5317A554239E770C00B8F9AA /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5317A553239E770C00B8F9AA /* smile.png */; };
 		531AA5D5238D91BA00564154 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531AA5D4238D91BA00564154 /* NotesTests.swift */; };
 		531AA5D6238DABB700564154 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534AEEF9238D1CA100E45A25 /* Notes.swift */; };
 		531AA5D8238DAC0900564154 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F3CB92383373C00AADFCE /* TunerViewController.swift */; };
@@ -39,7 +45,6 @@
 		538A89C52391A07E00869B30 /* FourierTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C42391A07E00869B30 /* FourierTransformer.swift */; };
 		538A89C92391A17100869B30 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A89C82391A17100869B30 /* Int.swift */; };
 		53A34142238C266700B23136 /* FrequencyDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A34141238C266700B23136 /* FrequencyDialView.swift */; };
-		53C653502398FA850041BD64 /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6534F2398FA850041BD64 /* NetworkServiceTest.swift */; };
 		53C653522398FAF70041BD64 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C653512398FAF70041BD64 /* NetworkService.swift */; };
 		53C653532398FC800041BD64 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C653512398FAF70041BD64 /* NetworkService.swift */; };
 		53C65354239901AD0041BD64 /* GuitarScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D4CED238FCFA00004DC1E /* GuitarScale.swift */; };
@@ -75,6 +80,9 @@
 
 /* Begin PBXFileReference section */
 		5317A549239E5C3300B8F9AA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5317A54B239E679300B8F9AA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5317A54F239E6F9C00B8F9AA /* ScalesNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesNetworkServiceTests.swift; sourceTree = "<group>"; };
+		5317A553239E770C00B8F9AA /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
 		531AA5C9238D909A00564154 /* GuitarTunerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarTunerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		531AA5CD238D909A00564154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		531AA5D4238D91BA00564154 /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
@@ -100,7 +108,6 @@
 		538A89C42391A07E00869B30 /* FourierTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourierTransformer.swift; sourceTree = "<group>"; };
 		538A89C82391A17100869B30 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		53A34141238C266700B23136 /* FrequencyDialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyDialView.swift; sourceTree = "<group>"; };
-		53C6534F2398FA850041BD64 /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
 		53C653512398FAF70041BD64 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		53C65358239902C70041BD64 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		53C6535B239902FB0041BD64 /* Datamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Datamodel.xcdatamodel; sourceTree = "<group>"; };
@@ -146,14 +153,23 @@
 			path = TabBars;
 			sourceTree = "<group>";
 		};
+		5317A552239E770200B8F9AA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5317A553239E770C00B8F9AA /* smile.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		531AA5CA238D909A00564154 /* GuitarTunerTests */ = {
 			isa = PBXGroup;
 			children = (
+				5317A552239E770200B8F9AA /* Images */,
 				535442152393D1B5006CB0E1 /* Notes */,
 				531AA5CD238D909A00564154 /* Info.plist */,
 				531AA5D4238D91BA00564154 /* NotesTests.swift */,
 				535442132393D156006CB0E1 /* FourierTests.swift */,
-				53C6534F2398FA850041BD64 /* NetworkServiceTest.swift */,
+				5317A54F239E6F9C00B8F9AA /* ScalesNetworkServiceTests.swift */,
 			);
 			path = GuitarTunerTests;
 			sourceTree = "<group>";
@@ -189,14 +205,14 @@
 			children = (
 				532F3C9E238335DB00AADFCE /* Info.plist */,
 				53A34140238C1E9900B23136 /* Core */,
-				5317A548239E5C0C00B8F9AA /* TabBars */,
-				5378C394239C1ACB000CAE49 /* NavigationControllers */,
 				53C7B53F239C0F0B00138336 /* Colors */,
-				53C65357239902B40041BD64 /* CoreData */,
 				532186642394108D00CF576E /* Notes */,
 				538A89C72391A16700869B30 /* Extentions */,
-				538A89BB23918A7600869B30 /* Fourier */,
+				5317A548239E5C0C00B8F9AA /* TabBars */,
+				5378C394239C1ACB000CAE49 /* NavigationControllers */,
+				53C65357239902B40041BD64 /* CoreData */,
 				536D4CE9238FCE000004DC1E /* Network */,
+				538A89BB23918A7600869B30 /* Fourier */,
 				532F3CB82383371400AADFCE /* Screens */,
 				538378A62388159400582497 /* Views */,
 				53D0BFDF238FE9E700F1B585 /* Cells */,
@@ -298,6 +314,7 @@
 			children = (
 				532F3C99238335DB00AADFCE /* Assets.xcassets */,
 				532F3C8D238335DA00AADFCE /* AppDelegate.swift */,
+				5317A54B239E679300B8F9AA /* Settings.swift */,
 				532F3C9B238335DB00AADFCE /* LaunchScreen.storyboard */,
 				53F4574523944BA1009DA03C /* scales.json */,
 			);
@@ -424,10 +441,12 @@
 			files = (
 				53F45753239451B0009DA03C /* 330_2.wav in Resources */,
 				53F45756239451B0009DA03C /* 300&200.wav in Resources */,
+				5317A554239E770C00B8F9AA /* smile.png in Resources */,
 				53F45750239451B0009DA03C /* 330_4.wav in Resources */,
 				53F45755239451B0009DA03C /* 330_0.wav in Resources */,
 				53F45751239451B0009DA03C /* 330_5.wav in Resources */,
 				53F45754239451B0009DA03C /* 330_1.wav in Resources */,
+				5317A551239E6FA700B8F9AA /* Assets.xcassets in Resources */,
 				53F45752239451B0009DA03C /* 330_3.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,14 +490,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				53C65354239901AD0041BD64 /* GuitarScale.swift in Sources */,
-				53C653502398FA850041BD64 /* NetworkServiceTest.swift in Sources */,
 				531AA5D5238D91BA00564154 /* NotesTests.swift in Sources */,
 				531AA5D8238DAC0900564154 /* TunerViewController.swift in Sources */,
+				5317A54D239E6D5C00B8F9AA /* Settings.swift in Sources */,
 				5354421C2393D571006CB0E1 /* Int.swift in Sources */,
 				5354421D2393D573006CB0E1 /* Double.swift in Sources */,
 				535442182393D404006CB0E1 /* Protocols.swift in Sources */,
 				535442192393D419006CB0E1 /* Spectrum.swift in Sources */,
 				53C65356239901B30041BD64 /* ScalesNetworkService.swift in Sources */,
+				5317A550239E6F9C00B8F9AA /* ScalesNetworkServiceTests.swift in Sources */,
 				535442172393D35E006CB0E1 /* SpectralAudioFileAnalyzer.swift in Sources */,
 				53C65355239901B10041BD64 /* RequestType.swift in Sources */,
 				535442142393D156006CB0E1 /* FourierTests.swift in Sources */,
@@ -487,6 +507,7 @@
 				531AA5DA238DAC1400564154 /* FrequencyDialView.swift in Sources */,
 				535442162393D273006CB0E1 /* FourierTransformer.swift in Sources */,
 				531AA5D9238DAC0B00564154 /* SpectrumView.swift in Sources */,
+				5317A54E239E6DBF00B8F9AA /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +533,7 @@
 				53C6535C239902FB0041BD64 /* Datamodel.xcdatamodeld in Sources */,
 				538A89BF23918ADA00869B30 /* SpectralAudioFileAnalyzer.swift in Sources */,
 				538A89C52391A07E00869B30 /* FourierTransformer.swift in Sources */,
+				5317A54C239E679300B8F9AA /* Settings.swift in Sources */,
 				5378C396239C1ADE000CAE49 /* NavigationController.swift in Sources */,
 				53D0BFDD238FE9CC00F1B585 /* ScaleCollectionViewCell.swift in Sources */,
 				53C65361239903C20041BD64 /* CoreDataService.swift in Sources */,

@@ -13,37 +13,38 @@ class FrequencyDialView: UIView {
     
     // MARK: - Settings
     
-    let maxFrequency = 1000
+    let maxFrequency = Int(Settings.maxFrequency)
     let fontSize: CGFloat = 18.0
     let labelHeight: CGFloat = 30.0
     let topMargin: CGFloat = 10.0
     let range: CGFloat = 4.5
+    let minorStepDivider: CGFloat = 0.5
+    let dialColor: UIColor = Color.graphite
     
-    var minX: CGFloat = 0.0
-    lazy var frequency: CGFloat = {
+    final lazy var frequency: CGFloat = {
         return range / 2.0
-    }()
+    }() 
     
-    lazy var majorStep = {
+    final lazy var majorStep = {
         return self.width / CGFloat(self.maxFrequency - 1)
     }()
     
-    lazy var minorStep = {
-        return self.majorStep / 2.0
+    final lazy var minorStep = {
+        return self.majorStep * minorStepDivider
     }()
     
     // MARK: - Properties
     
-    var dial: UIView!
+    private var dial: UIView!
     
-    var width: CGFloat!
-    var height: CGFloat!
+    private var width: CGFloat!
+    private var height: CGFloat!
     
-    var dialHeight: CGFloat!
-    var dialCenterY: CGFloat!
-    var labelCenterY: CGFloat!
+    private var dialHeight: CGFloat!
+    private var dialCenterY: CGFloat!
+    private var labelCenterY: CGFloat!
     
-    var isDrawed = false
+    private var isDrawed = false
 
     // MARK: - Init
     
@@ -51,7 +52,7 @@ class FrequencyDialView: UIView {
         super.init(frame: frame)
         layer.cornerRadius = 10.0
         layer.borderWidth = 1.5
-        layer.borderColor = Color.graphite.cgColor
+        layer.borderColor = dialColor.cgColor
         clipsToBounds = true
         self.isOpaque = false
     }
@@ -122,8 +123,8 @@ class FrequencyDialView: UIView {
     
     private func getFrequencyLabel() -> UILabel {
         let label = UILabel()
-        label.font = UIFont(name: "Courier", size: fontSize)
-        label.textColor = Color.graphite
+        label.font = UIFont(name: Settings.fontName, size: fontSize)
+        label.textColor = dialColor
         label.textAlignment = .center
         return label
     }
@@ -132,7 +133,7 @@ class FrequencyDialView: UIView {
         let dash = UIView()
         dash.frame.size = CGSize(width: width, height: height)
         dash.center = CGPoint(x: x, y: y)
-        dash.backgroundColor = Color.graphite
+        dash.backgroundColor = dialColor
         dash.layer.cornerRadius = 1
         return dash
     }
@@ -149,7 +150,7 @@ class FrequencyDialView: UIView {
         path.setLineDash(dashes, count: dashes.count, phase: 0.0)
         path.lineWidth = 2
         path.lineCapStyle = .round
-        Color.graphite.setStroke()
+        dialColor.setStroke()
         path.stroke()
     }
 }

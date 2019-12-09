@@ -19,7 +19,7 @@ class SpectralAudioFileAnalyzer {
         self.transformer = transformer
     }
 
-    func spectrum(file: AVAudioFile, duration: Double, maxFrequency: Double = 1000.0) -> Spectrum? {
+    func spectrum(file: AVAudioFile, duration: Double, maxFrequency: Double) -> Spectrum? {
         guard let data = fileToData(file: file, duration: duration) else { return nil }
         guard let spectrumData = transformer.transform(data) else { return nil }
         let length = getLengthPowerTwo(file: file, duration: duration)
